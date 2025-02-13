@@ -18,7 +18,7 @@ This Streamlit app visualizes the embedding space of text inputs using cosine si
 <img src="https://github.com/user-attachments/assets/6ece2cf1-626b-455d-9c55-1c93a6bae210" width="900"/>
 
 ## Try It Out  
-🚀 **[Run the App](#)**   
+🚀 **[Run the App](https://wetrolearn-embeddings.streamlit.app/)**   
 
 ## Learn More  
 This project is part of **[Wetroclouds](https://wetrocloud.com/) Wetrolearn**, an initiative to educate the public on AI.  
