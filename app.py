@@ -99,6 +99,14 @@ if st.button("Analyze Texts"):
 
         st.markdown("---")
         # Show figure in Streamlit
+        st.markdown("### Analysis Results")
+        if similarity_a > similarity_b:
+            st.markdown(f"<p style='margin: 0;'><strong>Similarity between <em>Reference Text</em> and Text-A:</strong> <span style='color: green;'>{similarity_a*100:.2f}%</span></p>", unsafe_allow_html=True)
+            st.markdown(f"<p style='margin: 0;'><strong>Similarity between <em>Reference Text</em> and Text-B:</strong> <span style='color: red;'>{similarity_b*100:.2f}%</span></p>", unsafe_allow_html=True)
+        else:
+            st.markdown(f"<p style='margin: 0;'><strong>Similarity between <em>Reference Text</em> and Text-A:</strong> <span style='color: red;'>{similarity_a*100:.2f}%</span></p>", unsafe_allow_html=True)
+            st.markdown(f"<p style='margin: 0;'><strong>Similarity between <em>Reference Text</em> and Text-B:</strong> <span style='color: green;'>{similarity_b*100:.2f}%</span></p>", unsafe_allow_html=True)
+        
         st.plotly_chart(fig)
     except ValueError as e:
         st.error(f"Please enter text in all three fields: Reference Text, Text-A, and Text-B.")
