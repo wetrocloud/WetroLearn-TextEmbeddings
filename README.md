@@ -37,3 +37,6 @@ Then
 pip install -r requirements.txt  
 streamlit run app.py
 ```
+
+## Give Us a Star  
+⭐ If you enjoyed learning about embeddings, please consider giving the repo a star on GitHub!  
