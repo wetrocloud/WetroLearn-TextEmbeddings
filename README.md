@@ -14,6 +14,9 @@ This Streamlit app visualizes the embedding space of text inputs using cosine si
 3. Click **Analyze Texts** to compute embeddings and visualize distances.  
 4. The graph will show how far **Text-A** and **Text-B** are from the reference text in embedding space.  
 
+## System Snapshot
+<img src="https://github.com/user-attachments/assets/6ece2cf1-626b-455d-9c55-1c93a6bae210" width="900"/>
+
 ## Try It Out  
 🚀 **[Run the App](#)**   
 
