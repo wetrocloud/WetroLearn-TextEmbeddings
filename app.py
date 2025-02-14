@@ -41,7 +41,7 @@ if st.button("Analyze Texts"):
         st.session_state.analyze_click_count += 1
 
         if st.session_state.analyze_click_count == 3:
-            st.success("If you're enjoying learning about embeddings, please consider giving the repo a star on [GitHub](https://github.com/wetrocloud/WetroLearn-TextEmbeddings)!")
+            st.success("If you're enjoying learning about embeddings, please consider giving the repo a star 🌟 on [GitHub](https://github.com/wetrocloud/WetroLearn-TextEmbeddings)!")
             st.session_state.analyze_click_count = 0  # Reset the counter
 
         # Generate embeddings only if the text has changed
