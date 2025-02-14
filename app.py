@@ -35,7 +35,6 @@ if st.button("Analyze Texts"):
     try:
         # Ensure all text inputs are provided
         if not reference_text or not text_a or not text_b:
-            # st.error("Please enter text in all three fields: Reference Text, Text-A, and Text-B.")
             raise ValueError("Missing text input")
 
         # Increment the click count
@@ -85,12 +84,26 @@ if st.button("Analyze Texts"):
 
             fig.add_trace(go.Scatter(x=[reference_value, abs(distance_1)], y=[0, 0], mode="lines", line=dict(color="green", width=3), showlegend=False))
             fig.add_trace(go.Scatter(x=[reference_value, -abs(distance_2)], y=[0, 0], mode="lines", line=dict(color="red", width=3), showlegend=False))
+            
+            mid_point_x = (abs(distance_1) + -abs(distance_2)) / 2 # used to calculate the center of the two points for the dotted line
         else:
             fig.add_trace(go.Scatter(x=[-abs(distance_1)], y=[0], mode="markers", name="Text-A", marker=dict(color="red", size=10), text=[text_a], hoverinfo="text"))
             fig.add_trace(go.Scatter(x=[abs(distance_2)], y=[0], mode="markers", name="Text-B", marker=dict(color="green", size=10), text=[text_b], hoverinfo="text"))
 
             fig.add_trace(go.Scatter(x=[reference_value, -abs(distance_1)], y=[0, 0], mode="lines", line=dict(color="red", width=3), showlegend=False))
             fig.add_trace(go.Scatter(x=[reference_value, abs(distance_2)], y=[0, 0], mode="lines", line=dict(color="green", width=3), showlegend=False))
+
+            mid_point_x = (-abs(distance_1) + abs(distance_2)) / 2
+
+        # Add a dotted vertical line in the middle
+        fig.add_shape(type="line",
+                  x0=mid_point_x, y0=-1, x1=mid_point_x, y1=1,
+                  line=dict(color="lightgrey", width=2, dash="dot"),
+                  name="Center Line")
+
+        # Add an invisible scatter to create a hover and legend entry for the center line
+        fig.add_trace(go.Scatter(x=[mid_point_x], y=[0], mode="markers", marker=dict(color="lightgrey", size=1),
+                 showlegend=True, name="Mid-Point (dotted grey line)", text=[f"Mid-Point: {mid_point_x:.2f}"], hoverinfo="text"))
 
         # Update layout
         fig.update_layout(title={"text": "Reference Text Similarity Compared To Text-A and Text-B", "x": 0.2},
