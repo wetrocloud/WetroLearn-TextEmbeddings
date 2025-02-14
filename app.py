@@ -22,12 +22,13 @@ if "analyze_click_count" not in st.session_state:
 
 # Collect user text inputs
 st.title("Understanding Embedding Space")
-reference_text = st.text_input("Reference Text")
+st.markdown("Understand the relationship between texts based on their embeddings; How AI interpretes text/images. Enter a ***Reference*** Text along with ***Text-A*** and ***Text-B*** to visualize and compare their semantic closeness. 🚀")
+reference_text = st.text_input("Reference Text", help="The main text to compare with Text-A and Text-B with.")
 col1, col2 = st.columns(2)
 with col1:
-    text_a = st.text_input("Text-A")
+    text_a = st.text_input("Text-A", help="The first text to compare with the Reference Text... Could be something similar or different.")
 with col2:
-    text_b = st.text_input("Text-B")
+    text_b = st.text_input("Text-B", help="The second text to compare with the Reference Text... Could be something similar or different.")
 
 
 if st.button("Analyze Texts"):
