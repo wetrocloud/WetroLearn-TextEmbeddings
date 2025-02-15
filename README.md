@@ -23,7 +23,7 @@ This Streamlit app visualizes the embedding space of text inputs using cosine si
 ## Learn More  
 This project is part of **[Wetroclouds](https://wetrocloud.com/) Wetrolearn**, an initiative to educate the public on AI.  
    
-📕📖 **[Read the Article](#)**  
+📕📖 **[Read the Article](https://medium.com/@wetrocloud/embeddings-in-ai-machine-learning-a-deep-dive-into-plagiarism-detection-with-wetrocloud-e5854eb6ac47)**  
 
 ## Installation  
 To run the project locally, follow these steps:  
