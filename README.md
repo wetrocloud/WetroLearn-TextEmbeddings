@@ -14,8 +14,8 @@ This Streamlit app visualizes the embedding space of text inputs using cosine si
 3. Click **Analyze Texts** to compute embeddings and visualize distances.  
 4. The graph will show how far **Text-A** and **Text-B** are from the reference text in embedding space.  
 
-## System Snapshot
-<img src="https://github.com/user-attachments/assets/521eea32-297c-4bd6-8e49-c54916eb8057" width="900"/>
+## 🎥 System Snapshot (click to watch demo video ⬇)   
+[![Watch the video](https://github.com/user-attachments/assets/521eea32-297c-4bd6-8e49-c54916eb8057)](https://youtu.be/vzadR7EeH9g) 
 
 ## Try It Out  
 🚀 **[Run the App](https://wetrolearn-embeddings.streamlit.app/)**   
